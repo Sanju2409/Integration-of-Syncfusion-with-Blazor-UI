@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>SyncfusionSample</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SyncfusionSample.Application.Contracts\SyncfusionSample.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Core" Version="2.2.0" />
+    <PackageReference Include="Syncfusion.Blazor" Version="20.4.0.53" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="20.4.0.53" />
+    <PackageReference Include="Volo.Abp.Account.HttpApi.Client" Version="7.0.3" />
+    <PackageReference Include="Volo.Abp.Identity.HttpApi.Client" Version="7.0.3" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi.Client" Version="7.0.3" />
+    <PackageReference Include="Volo.Abp.TenantManagement.HttpApi.Client" Version="7.0.3" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi.Client" Version="7.0.3" />
+    <PackageReference Include="Volo.Abp.SettingManagement.HttpApi.Client" Version="7.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="**\*generate-proxy.json" />
+    <Content Remove="**\*generate-proxy.json" />
+  </ItemGroup>
+
+</Project>
